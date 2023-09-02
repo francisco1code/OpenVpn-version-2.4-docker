@@ -1,10 +1,8 @@
-dkc := "docker-compose.yaml"
-
 up: 
-	docker-compose -f ${dkc} up --build -d
+	docker compose up --build -d
 
 run:
-	docker exec -it openvpn-version-2.4 bash
+	docker exec -it openvpn-version-2.4 sh -c "bash connect.sh"
 
 down:
-	docker-compose -f ${dkc} down --volumes
+	docker compose down --volumes

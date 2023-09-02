@@ -1,22 +1,21 @@
 # Openssl version 2.4 for docker
 
-Connect to a VPN using openvpn version 2.4 inside docker container.
+Connects to an OpenVPN server using openvpn version 2.4 inside a docker container.
 
 **Attention**: Make sure your settings files are in the project root
 
-## Command 
+## Initial Setup
 
-Build  and up docker container 
+Copy the OpenVPN configuration files and credentials (.ovpn, .key, ...) to the root directory of this project
 
-``` make up```
+## Commands 
 
-Access the CLI container
+Build the docker container 
+
+```make up```
+
+Access the CLI container and connect
 
 ```make run```
 
-Connect to openvpn
-
-``` penvpn --config  $(ls *.ovpn) ```
-
-now put your username and password
-
+Insert your username and password
