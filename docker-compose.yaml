@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  openvpn-version-2.4:
+    container_name: openvpn-version-2.4
+    build: .
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - "/dev/net/tun:/dev/net/tun"
+    network_mode: host
+
